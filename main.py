@@ -1,9 +1,6 @@
 import tkinter as tk
 import ttkbootstrap as ttk
 
-
-
-
 # functions
 def convert():
    feet_input = entry_str.get()
