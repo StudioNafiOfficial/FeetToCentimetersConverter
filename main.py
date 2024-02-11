@@ -13,13 +13,16 @@ def convert():
       inches = float(feet_input[1]) * .083
       totalInFeet += inches
    totalInCentimeters = str(totalInFeet * 12 * 2.54)
-   output_string.set(totalInCentimeters)
+   totalInMilimeters = str(float(totalInCentimeters) * 10)
+   output_numbers = f'Centimeters: {totalInCentimeters}\nMilimeters: {totalInMilimeters}'
+   output_string.set(output_numbers)
+
 
 
 # window
 window = ttk.Window(themename="vapor")
 window.title("yap")
-window.geometry("250x250")
+window.geometry("300x300")
 
 
 # title
