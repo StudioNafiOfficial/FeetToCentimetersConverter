@@ -6,10 +6,15 @@ def convert():
    feet_input = entry_str.get()
    feet_input = (list(feet_input.split("'")))
    foot = float(feet_input[0])
-   inches = float(feet_input[1]) * .083
-   totalInFeet = foot + inches
+   totalInFeet = foot
+   if len(feet_input) == 1:
+      pass
+   else:
+      inches = float(feet_input[1]) * .083
+      totalInFeet += inches
    totalInCentimeters = str(totalInFeet * 12 * 2.54)
    output_string.set(totalInCentimeters)
+
 
 # window
 window = ttk.Window(themename="vapor")
